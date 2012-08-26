@@ -202,9 +202,9 @@ public class EntityList
         addMapping(EntityIronGolem.class, "VillagerGolem", 99);
         addMapping(EntityVillager.class, "Villager", 120, 5651507, 12422002);
         addMapping(EntityEnderCrystal.class, "EnderCrystal", 200);
-        addMapping(EntityCheval.class, "Cheval", 201, 5651507, 12422002);
-        addMapping(EntityChevalNoir.class, "Cheval Noir", 202, 5651507, 12422002);
-        addMapping(EntityChevalBlanc.class, "Cheval Blanc", 203, 5651507, 12422002);
+        addMapping(EntityCheval.class, "Cheval", 110, 5651507, 12422002);
+        addMapping(EntityChevalNoir.class, "Cheval Noir", 111, 5651507, 12422002);
+        addMapping(EntityChevalBlanc.class, "Cheval Blanc", 112, 5651507, 12422002);
     
     }
 }
