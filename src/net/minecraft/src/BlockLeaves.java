@@ -10,7 +10,7 @@ public class BlockLeaves extends BlockLeavesBase
      * switch the displayed version between fancy and fast graphics (fast is this index + 1).
      */
     private int baseIndexInPNG;
-    public static final String[] field_72136_a = new String[] {"oak", "spruce", "birch", "jungle"};
+    public static final String[] field_72136_a = new String[] {"oak", "spruce", "birch", "jungle", "pommier"};
     int[] adjacentTreeBlocks;
 
     protected BlockLeaves(int par1, int par2)

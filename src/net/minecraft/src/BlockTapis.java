@@ -1,5 +1,6 @@
 package net.minecraft.src;
  
+import java.util.List;
 import java.util.Random;
  
 public class BlockTapis extends Block
@@ -8,6 +9,19 @@ public class BlockTapis extends Block
     {
         super(par1, par2, Material.cloth);
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.1F, 1.0F);
+        this.setCreativeTab(CreativeTabs.tabDeco);
+    }
+    
+    
+    /**
+     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+     */
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
+        for (int var4 = 0; var4 < 16; ++var4)
+        {
+            par3List.add(new ItemStack(par1, 1, var4));
+        }
     }
  
     //Ceci est pour passer à travers le bloc. Enlevez-le si vous ne vous les pas avoir un effet "noclip".

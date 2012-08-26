@@ -6,7 +6,7 @@ public class BlockNuage extends BlockBreakable{
 
 	protected BlockNuage(int par1, int par2, Material par3Material,boolean par4) {
 		super(par1, par2, par3Material,par4);
-		// TODO Auto-generated constructor stub
+		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 
     /**

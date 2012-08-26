@@ -188,7 +188,7 @@ public class GameSettings
         this.renderDistance = 1;
         this.limitFramerate = 0;
         this.ofKeyBindZoom = new KeyBinding("Zoom", 29);
-        this.keyBindings = new KeyBinding[] {this.keyBindAttack, this.keyBindUseItem, this.keyBindForward, this.keyBindLeft, this.keyBindBack, this.keyBindRight, this.keyBindJump, this.keyBindSneak, this.keyBindDrop, this.keyBindInventory, this.keyBindChat, this.keyBindPlayerList, this.keyBindPickBlock, this.ofKeyBindZoom, this.field_74323_J, this.keyBindSweetcraft};
+        this.keyBindings = new KeyBinding[] {this.keyBindAttack, this.keyBindUseItem, this.keyBindForward, this.keyBindLeft, this.keyBindBack, this.keyBindRight, this.keyBindJump, this.keyBindSneak, this.keyBindDrop, this.keyBindInventory, this.keyBindChat, this.keyBindPlayerList, this.keyBindPickBlock, this.field_74323_J, this.keyBindSweetcraft};
         this.difficulty = 2;
         this.hideGUI = false;
         this.thirdPersonView = 0;
@@ -217,7 +217,7 @@ public class GameSettings
         this.renderDistance = 1;
         this.limitFramerate = 0;
         this.ofKeyBindZoom = new KeyBinding("Zoom", 29);
-        this.keyBindings = new KeyBinding[] {this.keyBindAttack, this.keyBindUseItem, this.keyBindForward, this.keyBindLeft, this.keyBindBack, this.keyBindRight, this.keyBindJump, this.keyBindSneak, this.keyBindDrop, this.keyBindInventory, this.keyBindChat, this.keyBindPlayerList, this.keyBindPickBlock, this.ofKeyBindZoom, this.field_74323_J, this.keyBindSweetcraft};
+        this.keyBindings = new KeyBinding[] {this.keyBindAttack, this.keyBindUseItem, this.keyBindForward, this.keyBindLeft, this.keyBindBack, this.keyBindRight, this.keyBindJump, this.keyBindSneak, this.keyBindDrop, this.keyBindInventory, this.keyBindChat, this.keyBindPlayerList, this.keyBindPickBlock, this.field_74323_J, this.keyBindSweetcraft};
         this.difficulty = 2;
         this.hideGUI = false;
         this.thirdPersonView = 0;

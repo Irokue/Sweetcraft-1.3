@@ -2,11 +2,14 @@ package net.minecraft.src;
 
 import java.util.ArrayList;
 
+import net.minecraft.client.Minecraft;
+
 public class BlockChaise extends BlockMountable{
 	
 	public BlockChaise(int par1, int par2){
 		super(par1, par2, Material.wood);
 		blockIndexInTexture = 4;
+		this.setCreativeTab(CreativeTabs.tabDeco);
 	}
 
 	public BlockChaise(int par1, int par2, Material par3Material) {
@@ -41,7 +44,7 @@ public class BlockChaise extends BlockMountable{
      */
     public int getRenderType()
     {
-        return 30;
+        return 100;
     }
 
 	
@@ -125,7 +128,7 @@ public class BlockChaise extends BlockMountable{
      * Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z,
      * axisAlignedBB, arrayList
      */
-     public void getCollidingBoundingBoxes(World par1World, int par2, int par3, int par4, AxisAlignedBB par5AxisAlignedBB, ArrayList par6ArrayList)
+     public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
      {
          int i = par1World.getBlockMetadata(par2, par3, par4);
          int j = i & 3;
@@ -143,30 +146,31 @@ public class BlockChaise extends BlockMountable{
          }
   
          setBlockBounds(0.2F, 0.0f, 0.2f, 0.8F, 0.5f, 0.8F);
-         super.getCollidingBoundingBoxes(par1World, par2, par3, par4, par5AxisAlignedBB, par6ArrayList);
+         super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
   
          if (j == 0)
          {
          	 setBlockBounds(0.7F, 0.5F, 0.2F, 0.8F, 1F, 0.8F);
-             super.getCollidingBoundingBoxes(par1World, par2, par3, par4, par5AxisAlignedBB, par6ArrayList);
+             super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
          }
          else if (j == 1)
          {
          	 setBlockBounds(0.2F, 0.5F, 0.2F, 0.3F, 1F, 0.8F);
-             super.getCollidingBoundingBoxes(par1World, par2, par3, par4, par5AxisAlignedBB, par6ArrayList);
+             super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
          }
          else if (j == 2)
          {
          	 setBlockBounds(0.2F, 0.5F, 0.7F, 0.8F, 1F, 0.8F);
-             super.getCollidingBoundingBoxes(par1World, par2, par3, par4, par5AxisAlignedBB, par6ArrayList);
+             super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
          }
          else if (j == 3)
          {
          	 setBlockBounds(0.2F, 0.5F, 0.2F, 0.8F, 1F, 0.3F);
-             super.getCollidingBoundingBoxes(par1World, par2, par3, par4, par5AxisAlignedBB, par6ArrayList);
+             super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
          }
   
          setBlockBounds(0.2F, 0.0F, 0.2F, 0.8F, 1.0F, 0.8F);
+         return super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
      }
      
     

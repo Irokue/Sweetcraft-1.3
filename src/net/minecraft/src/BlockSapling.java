@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class BlockSapling extends BlockFlower
 {
-    public static final String[] field_72270_a = new String[] {"oak", "spruce", "birch", "jungle"};
+    public static final String[] field_72270_a = new String[] {"oak", "spruce", "birch", "jungle", "pommier"};
 
     protected BlockSapling(int par1, int par2)
     {
@@ -45,8 +45,8 @@ public class BlockSapling extends BlockFlower
      */
     public int getBlockTextureFromSideAndMetadata(int par1, int par2)
     {
-        par2 &= 3;
-        return par2 == 1 ? 63 : (par2 == 2 ? 79 : (par2 == 3 ? 30 : super.getBlockTextureFromSideAndMetadata(par1, par2)));
+        par2 &= 7;
+        return par2 == 1 ? 63 : (par2 == 2 ? 79 : (par2 == 3 ? 30 : (par2 == 4 ? 215 : super.getBlockTextureFromSideAndMetadata(par1, par2))));
     }
 
     /**
@@ -54,7 +54,7 @@ public class BlockSapling extends BlockFlower
      */
     public void growTree(World par1World, int par2, int par3, int par4, Random par5Random)
     {
-        int var6 = par1World.getBlockMetadata(par2, par3, par4) & 3;
+        int var6 = par1World.getBlockMetadata(par2, par3, par4) & 7;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -94,6 +94,10 @@ public class BlockSapling extends BlockFlower
                 var8 = 0;
                 var7 = new WorldGenTrees(true, 4 + par5Random.nextInt(7), 3, 3, false);
             }
+        }
+        else if(var6 == 4)
+        {
+        	var7 = new WorldGenPommier(true);
         }
         else
         {
@@ -138,7 +142,7 @@ public class BlockSapling extends BlockFlower
      */
     public boolean isSameSapling(World par1World, int par2, int par3, int par4, int par5)
     {
-        return par1World.getBlockId(par2, par3, par4) == this.blockID && (par1World.getBlockMetadata(par2, par3, par4) & 3) == par5;
+        return par1World.getBlockId(par2, par3, par4) == this.blockID && (par1World.getBlockMetadata(par2, par3, par4) & 7) == par5;
     }
 
     /**
@@ -146,7 +150,7 @@ public class BlockSapling extends BlockFlower
      */
     protected int damageDropped(int par1)
     {
-        return par1 & 3;
+        return par1 & 7;
     }
 
     /**
@@ -158,5 +162,6 @@ public class BlockSapling extends BlockFlower
         par3List.add(new ItemStack(par1, 1, 1));
         par3List.add(new ItemStack(par1, 1, 2));
         par3List.add(new ItemStack(par1, 1, 3));
+        par3List.add(new ItemStack(par1, 1, 4));
     }
 }

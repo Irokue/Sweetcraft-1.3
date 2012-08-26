@@ -16,31 +16,33 @@ public class BlockLeavesPommier extends BlockLeavesBase
         super(par1, par2, Material.leaves, false);
         baseIndexInPNG = par2;
         setTickRandomly(true);
+        this.setCreativeTab(CreativeTabs.tabDeco);
+
     }
 
-
+    
     /**
-     * Called whenever the block is removed.
+     * ejects contained items into the world, and notifies neighbours of an update, as appropriate
      */
-    public void onBlockRemoval(World par1World, int par2, int par3, int par4)
+    public void breakBlock(World par1World, int par2, int par3, int par4, int par5, int par6)
     {
-        int i = 1;
-        int j = i + 1;
+        byte var7 = 1;
+        int var8 = var7 + 1;
 
-        if (par1World.checkChunksExist(par2 - j, par3 - j, par4 - j, par2 + j, par3 + j, par4 + j))
+        if (par1World.checkChunksExist(par2 - var8, par3 - var8, par4 - var8, par2 + var8, par3 + var8, par4 + var8))
         {
-            for (int k = -i; k <= i; k++)
+            for (int var9 = -var7; var9 <= var7; ++var9)
             {
-                for (int l = -i; l <= i; l++)
+                for (int var10 = -var7; var10 <= var7; ++var10)
                 {
-                    for (int i1 = -i; i1 <= i; i1++)
+                    for (int var11 = -var7; var11 <= var7; ++var11)
                     {
-                        int j1 = par1World.getBlockId(par2 + k, par3 + l, par4 + i1);
+                        int var12 = par1World.getBlockId(par2 + var9, par3 + var10, par4 + var11);
 
-                        if (j1 == Block.leavesPommier.blockID)
+                        if (var12 == Block.leavesPommier.blockID)
                         {
-                            int k1 = par1World.getBlockMetadata(par2 + k, par3 + l, par4 + i1);
-                            par1World.setBlockMetadata(par2 + k, par3 + l, par4 + i1, k1 | 8);
+                            int var13 = par1World.getBlockMetadata(par2 + var9, par3 + var10, par4 + var11);
+                            par1World.setBlockMetadata(par2 + var9, par3 + var10, par4 + var11, var13 | 8);
                         }
                     }
                 }
@@ -259,14 +261,7 @@ public class BlockLeavesPommier extends BlockLeavesBase
      */
     public int getBlockTextureFromSideAndMetadata(int par1, int par2)
     {
-        if ((par2 & 3) == 1)
-        {
-            return blockIndexInTexture + 1;
-        }
-        else
-        {
-            return blockIndexInTexture;
-        }
+    	return par1 == 1 ? blockIndexInTexture : (par1 == 0 ? blockIndexInTexture : blockIndexInTexture +1);
     }
 
     /**

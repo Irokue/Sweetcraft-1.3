@@ -169,6 +169,25 @@ public class Item
     public static Item recordWard = (new ItemRecord(2009, "ward")).setIconCoord(9, 15).setItemName("record");
     public static Item record11 = (new ItemRecord(2010, "11")).setIconCoord(10, 15).setItemName("record");
 
+    /** ITEMS DE SWEETCRAFT **/
+    
+    public static Item maille = (new ItemMaille(130)).setIconCoord(13, 11).setItemName("maille");
+    public static Item raisin = (new ItemRaisin(131, 6, false)).setAlwaysEdible().setIconCoord(11, 11).setItemName("raisin");
+    public static Item raisinSeed = (new ItemSeeds(132, Block.grappeCrops.blockID, Block.tilledField.blockID)).setIconCoord(10, 11).setItemName("raisinSeeds");
+    public static Item vin = (new ItemVin(133)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 20, 0, 100F).setIconCoord(12, 11).setItemName("vin");
+    public static Item vinVide = (new Item(134)).setIconCoord(12, 12).setItemName("vinVide");
+    public static Item chopeBiere = (new ItemBiere(135)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 20, 0, 1.0F).setIconCoord(5, 12).setItemName("chopeBière");
+    public static Item chopeVide = (new Item(136)).setIconCoord(5, 9).setItemName("chopeVide"); 
+    public static Item seedOrge = new ItemSeeds(137, Block.CropsOrge.blockID, Block.tilledField.blockID).setIconCoord(10, 10).setItemName("seedOrge");
+    public static Item orge = new Item(138).setIconCoord(5, 10).setItemName("Orge");
+    public static Item liquideSuspect = (new ItemLiquideSuspect(139)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 60, 0, 1.0F).setIconCoord(5, 11).setItemName("liquideSuspect");
+    public static Item bolLait = (new ItemSoup(140, 9)).setIconCoord(5, 13).setItemName("Bol de lait");
+    public static Item tube = (new Item(141)).setIconCoord(1,6).setItemName("tube");
+    public static Item flechette = (new Item(142)).setIconCoord(1,7).setItemName("flechette");
+    public static Item sarbacane = (new ItemSarbacane(143)).setIconCoord(1,8).setItemName("sarbacanne");
+    public static Item arrowRedstone = (new Item(150)).setIconCoord(1,8).setItemName("arrowredstone");
+    public static Item sac = (new ItemSac(151));
+    
     /** Item index + 256 */
     public final int shiftedIndex;
 

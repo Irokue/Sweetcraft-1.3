@@ -336,6 +336,13 @@ public class EntityPlayerSP extends EntityPlayer
         this.mc.displayGuiScreen(new GuiChest(this.inventory, par1IInventory));
     }
 
+
+    public void displayGUISac(ItemStack par1ItemStack)
+    {
+        //mc.displayGuiScreen(new Guisac(inventory, par1ItemStack));
+    	this.mc.displayGuiScreen(new GuiSac(inventory, new InventorySac(par1ItemStack, this),par1ItemStack));
+    }
+    
     /**
      * Displays the crafting GUI for a workbench.
      */

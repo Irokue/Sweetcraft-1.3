@@ -382,9 +382,99 @@ public class RenderBlocks
             this.renderStandardBlock(Block.snow, par2, par3, par4);
         }
 
-        return var5 == 0 ? this.renderStandardBlock(par1Block, par2, par3, par4) : (var5 == 31 ? this.func_78581_r(par1Block, par2, par3, par4) : (var5 == 4 ? this.renderBlockFluids(par1Block, par2, par3, par4) : (var5 == 13 ? this.renderBlockCactus(par1Block, par2, par3, par4) : (var5 == 1 ? this.renderCrossedSquares(par1Block, par2, par3, par4) : (var5 == 19 ? this.renderBlockStem(par1Block, par2, par3, par4) : (var5 == 23 ? this.renderBlockLilyPad(par1Block, par2, par3, par4) : (var5 == 6 ? this.renderBlockCrops(par1Block, par2, par3, par4) : (var5 == 2 ? this.renderBlockTorch(par1Block, par2, par3, par4) : (var5 == 3 ? this.renderBlockFire(par1Block, par2, par3, par4) : (var5 == 5 ? this.renderBlockRedstoneWire(par1Block, par2, par3, par4) : (var5 == 8 ? this.renderBlockLadder(par1Block, par2, par3, par4) : (var5 == 7 ? this.renderBlockDoor(par1Block, par2, par3, par4) : (var5 == 9 ? this.renderBlockMinecartTrack((BlockRail)par1Block, par2, par3, par4) : (var5 == 10 ? this.renderBlockStairs(par1Block, par2, par3, par4) : (var5 == 27 ? this.renderBlockDragonEgg((BlockDragonEgg)par1Block, par2, par3, par4) : (var5 == 11 ? this.renderBlockFence((BlockFence)par1Block, par2, par3, par4) : (var5 == 12 ? this.renderBlockLever(par1Block, par2, par3, par4) : (var5 == 29 ? this.func_78577_f(par1Block, par2, par3, par4) : (var5 == 30 ? this.func_78619_g(par1Block, par2, par3, par4) : (var5 == 14 ? this.renderBlockBed(par1Block, par2, par3, par4) : (var5 == 15 ? this.renderBlockRepeater(par1Block, par2, par3, par4) : (var5 == 16 ? this.renderPistonBase(par1Block, par2, par3, par4, false) : (var5 == 17 ? this.renderPistonExtension(par1Block, par2, par3, par4, true) : (var5 == 18 ? this.renderBlockPane((BlockPane)par1Block, par2, par3, par4) : (var5 == 20 ? this.renderBlockVine(par1Block, par2, par3, par4) : (var5 == 21 ? this.renderBlockFenceGate((BlockFenceGate)par1Block, par2, par3, par4) : (var5 == 24 ? this.renderBlockCauldron((BlockCauldron)par1Block, par2, par3, par4) : (var5 == 25 ? this.renderBlockBrewingStand((BlockBrewingStand)par1Block, par2, par3, par4) : (var5 == 26 ? this.renderBlockEndPortalFrame(par1Block, par2, par3, par4) : (var5 == 28 ? this.func_78616_a((BlockCocoa)par1Block, par2, par3, par4) : (Reflector.hasClass(0) ? Reflector.callBoolean(0, new Object[] {this, this.blockAccess, Integer.valueOf(par2), Integer.valueOf(par3), Integer.valueOf(par4), par1Block, Integer.valueOf(var5)}): false)))))))))))))))))))))))))))))));
+        return var5 == 0 ? this.renderStandardBlock(par1Block, par2, par3, par4) : (var5 == 31 ? this.func_78581_r(par1Block, par2, par3, par4) : (var5 == 4 ? this.renderBlockFluids(par1Block, par2, par3, par4) : (var5 == 13 ? this.renderBlockCactus(par1Block, par2, par3, par4) : (var5 == 1 ? this.renderCrossedSquares(par1Block, par2, par3, par4) : (var5 == 19 ? this.renderBlockStem(par1Block, par2, par3, par4) : (var5 == 23 ? this.renderBlockLilyPad(par1Block, par2, par3, par4) : (var5 == 6 ? this.renderBlockCrops(par1Block, par2, par3, par4) : (var5 == 2 ? this.renderBlockTorch(par1Block, par2, par3, par4) : (var5 == 3 ? this.renderBlockFire(par1Block, par2, par3, par4) : (var5 == 5 ? this.renderBlockRedstoneWire(par1Block, par2, par3, par4) : (var5 == 8 ? this.renderBlockLadder(par1Block, par2, par3, par4) : (var5 == 7 ? this.renderBlockDoor(par1Block, par2, par3, par4) : (var5 == 9 ? this.renderBlockMinecartTrack((BlockRail)par1Block, par2, par3, par4) : (var5 == 10 ? this.renderBlockStairs(par1Block, par2, par3, par4) : (var5 == 27 ? this.renderBlockDragonEgg((BlockDragonEgg)par1Block, par2, par3, par4) : (var5 == 11 ? this.renderBlockFence((BlockFence)par1Block, par2, par3, par4) : (var5 == 12 ? this.renderBlockLever(par1Block, par2, par3, par4) : (var5 == 29 ? this.func_78577_f(par1Block, par2, par3, par4) : (var5 == 30 ? this.func_78619_g(par1Block, par2, par3, par4) : (var5 == 14 ? this.renderBlockBed(par1Block, par2, par3, par4) : (var5 == 15 ? this.renderBlockRepeater(par1Block, par2, par3, par4) : (var5 == 16 ? this.renderPistonBase(par1Block, par2, par3, par4, false) : (var5 == 17 ? this.renderPistonExtension(par1Block, par2, par3, par4, true) : (var5 == 18 ? this.renderBlockPane((BlockPane)par1Block, par2, par3, par4) : (var5 == 20 ? this.renderBlockVine(par1Block, par2, par3, par4) : (var5 == 21 ? this.renderBlockFenceGate((BlockFenceGate)par1Block, par2, par3, par4) : (var5 == 24 ? this.renderBlockCauldron((BlockCauldron)par1Block, par2, par3, par4) : (var5 == 25 ? this.renderBlockBrewingStand((BlockBrewingStand)par1Block, par2, par3, par4) : (var5 == 26 ? this.renderBlockEndPortalFrame(par1Block, par2, par3, par4) : (var5 == 28 ? this.func_78616_a((BlockCocoa)par1Block, par2, par3, par4) : (var5 == 100 ? this.renderBlockChaise(par1Block, par2, par3, par4) : (var5 == 101 ? this.renderBlockTable(par1Block, par2, par3, par4) : (Reflector.hasClass(0) ? Reflector.callBoolean(0, new Object[] {this, this.blockAccess, Integer.valueOf(par2), Integer.valueOf(par3), Integer.valueOf(par4), par1Block, Integer.valueOf(var5)}): false)))))))))))))))))))))))))))))))));
     }
 
+    
+    public boolean renderBlockTable(Block par1Block, int par2, int par3, int par4)
+    {
+    	boolean flag = false;
+    	
+    	par1Block.setBlockBounds(0.1f, 0.0f, 0.1f, 0.2f, 0.9f, 0.2f);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.8f, 0.0f, 0.1f, 0.9f, 0.9f, 0.2f);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.1f, 0.0f, 0.8f, 0.2f, 0.9f, 0.9f);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.8f, 0.0f, 0.8f, 0.9f, 0.9f, 0.9f);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.0f, 0.9f, 0.0f, 1f, 1f, 1f);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	
+    	par1Block.setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, 1f, 1f);
+    	flag = true;
+    	return flag;
+    }
+    
+    public boolean renderBlockChaise(Block par1Block, int par2, int par3, int par4)
+    {
+    
+    	boolean flag = false;
+    	int l = blockAccess.getBlockMetadata(par2, par3, par4);
+    	int i = l & 3;
+    	
+    	par1Block.setBlockBounds(0.2F, 0.0F, 0.2F, 0.3F, 0.4F, 0.3F);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.7F, 0.0F, 0.2F, 0.8F, 0.4F, 0.3F);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.2F, 0.0F, 0.7F, 0.3F, 0.4F, 0.8F);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.7F, 0.0F, 0.7F, 0.8F, 0.4F, 0.8F);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	par1Block.setBlockBounds(0.2F, 0.4F, 0.2F, 0.8F, 0.5F, 0.8F);
+    	renderStandardBlock(par1Block, par2, par3, par4);
+    	
+    	if(i == 0){ 
+	    	par1Block.setBlockBounds(0.7F, 0.6F, 0.2F, 0.8F, 0.7F, 0.8F);
+	    	renderStandardBlock(par1Block, par2, par3, par4);
+	    	par1Block.setBlockBounds(0.7F, 0.8F, 0.2F, 0.8F, 0.9F, 0.8F);
+	    	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.7F, 0.5F, 0.7F, 0.8F, 1F, 0.8F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.7F, 0.5F, 0.2F, 0.8F, 1F, 0.3F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+    	}
+    	
+    	if(i == 1){
+        	par1Block.setBlockBounds(0.2F, 0.6F, 0.3F, 0.3F, 0.7F, 0.7F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.2F, 0.8F, 0.3F, 0.3F, 0.9F, 0.7F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.2F, 0.5F, 0.7F, 0.3F, 1F, 0.8F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.2F, 0.5F, 0.2F, 0.3F, 1F, 0.3F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	
+    	}
+    	if(i == 2){
+        	par1Block.setBlockBounds(0.3F, 0.6F, 0.7F, 0.7F, 0.7F, 0.8F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.3F, 0.8F, 0.7F, 0.7F, 0.9F, 0.8F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.2F, 0.5F, 0.7F, 0.3F, 1F, 0.8F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.7F, 0.5F, 0.7F, 0.8F, 1F, 0.8F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	
+    	}
+    	if(i == 3){
+        	par1Block.setBlockBounds(0.2F, 0.6F, 0.2F, 0.8F, 0.7F, 0.3F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.2F, 0.8F, 0.2F, 0.8F, 0.9F, 0.3F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.7F, 0.5F, 0.2F, 0.8F, 1F, 0.3F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	par1Block.setBlockBounds(0.2F, 0.5F, 0.2F, 0.3F, 1F, 0.3F);
+        	renderStandardBlock(par1Block, par2, par3, par4);
+        	
+    	}
+    	par1Block.setBlockBounds(0.2f,0.0f,0.2f, 0.8f, 1f, 0.8f);
+    	
+    	flag = true;
+    	return flag;
+    	
+    }
+    
     /**
      * Render BlockEndPortalFrame
      */
@@ -7250,6 +7340,133 @@ public class RenderBlocks
 
                 par1Block.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
             }
+            else if(var6 == 100){
+              	 for (int k1 = 0; k1 < 10; k1++) //à voir par rapport aux nombres de bounds
+                   {
+                       if (k1 == 0)
+                       {
+                           par1Block.setBlockBounds(0.2F, 0.0F, 0.2F, 0.3F, 0.4F, 0.3F);// faire tes coordonnées
+                        
+                       }
+                       if (k1 == 1)
+                       {
+                           par1Block.setBlockBounds(0.2F, 0.0F, 0.7F, 0.3F, 0.4F, 0.8F);// faire tes coordonnées
+                       }
+                       if (k1 == 2)
+                       {
+                           par1Block.setBlockBounds(0.7F, 0.0F, 0.2F, 0.8F, 0.4F, 0.3F);// faire tes coordonnées
+                       }
+                       if(k1 == 3)
+                       {
+                      	 par1Block.setBlockBounds(0.7F,0.0F,0.7F, 0.8F,0.4F,0.8F);
+                       }
+                       if(k1 == 4)
+                       {
+                      	 par1Block.setBlockBounds(0.2F, 0.0F, 0.2F, 0.3F, 0.4F, 0.3F);
+                       }
+                       if(k1 == 5)
+                       {
+                      	 par1Block.setBlockBounds(0.2F, 0.4F, 0.2F, 0.8F, 0.5F, 0.8F);
+                       }
+                       if(k1 == 6)
+                       {
+                      	 par1Block.setBlockBounds(0.2F, 0.5F, 0.2F, 0.3F, 1F, 0.3F);
+                       }
+                       if(k1 == 7)
+                       {
+                      	 par1Block.setBlockBounds(0.7F, 0.5F, 0.2F, 0.8F, 1F, 0.3F);
+                       }
+                       if(k1 == 8)
+                       {
+                      	 par1Block.setBlockBounds(0.2F, 0.6F, 0.2F, 0.8F, 0.7F, 0.3F);
+                       }
+                       if(k1 == 9)
+                       {
+                      	 par1Block.setBlockBounds(0.2F, 0.8F, 0.2F, 0.8F, 0.9F, 0.3F);
+                       }
+                  
+                       GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, -1F, 0.0F);
+                       renderBottomFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(0));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, 1.0F, 0.0F);
+                       renderTopFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(1));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, 0.0F, -1F);
+                       renderEastFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(2));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, 0.0F, 1.0F);
+                       renderWestFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(3));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(-1F, 0.0F, 0.0F);
+                       renderNorthFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(4));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(1.0F, 0.0F, 0.0F);
+                       renderSouthFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(5));
+                       var4.draw();
+                       GL11.glTranslatef(0.5F, 0.5F, 0.5F);
+                   }
+                   	par1Block.setBlockBounds(0.2F, 0.0F, 0.2F, 0.8F, 1F, 0.8F);
+                   }
+               else if (var6 == 101)
+               {
+               	for (int k1 = 0; k1 < 5; k1++) //à voir par rapport aux nombres de bounds
+                   {
+                       if (k1 == 0)
+                       {
+                   		par1Block.setBlockBounds(0.1f, 0.0f, 0.1f, 0.2f, 0.9f, 0.2f);                 
+                       }
+                       if (k1 == 1)
+                       {
+                       	par1Block.setBlockBounds(0.8f, 0.0f, 0.1f, 0.9f, 0.9f, 0.2f);
+                       }
+                       if (k1 == 2)
+                       {
+                       	par1Block.setBlockBounds(0.1f, 0.0f, 0.8f, 0.2f, 0.9f, 0.9f);
+                       }
+                       if(k1 == 3)
+                       {
+                       	par1Block.setBlockBounds(0.8f, 0.0f, 0.8f, 0.9f, 0.9f, 0.9f);
+                       }
+                       if(k1 == 4)
+                       {
+                       	par1Block.setBlockBounds(0.0f, 0.9f, 0.0f, 1f, 1f, 1f);
+                       }
+                       GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, -1F, 0.0F);
+                       renderBottomFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(0));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, 1.0F, 0.0F);
+                       renderTopFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(1));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, 0.0F, -1F);
+                       renderEastFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(2));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(0.0F, 0.0F, 1.0F);
+                       renderWestFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(3));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(-1F, 0.0F, 0.0F);
+                       renderNorthFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(4));
+                       var4.draw();
+                       var4.startDrawingQuads();
+                       var4.setNormal(1.0F, 0.0F, 0.0F);
+                       renderSouthFace(par1Block, 0.0D, 0.0D, 0.0D, par1Block.getBlockTextureFromSide(5));
+                       var4.draw();
+                       GL11.glTranslatef(0.5F, 0.5F, 0.5F);
+                   }
+                   	par1Block.setBlockBounds(0.0F, 0.0F, 0.0F, 1F, 1F, 1F);
+               }
             else if (Reflector.hasClass(0))
             {
                 Reflector.callVoid(1, new Object[] {this, par1Block, Integer.valueOf(par2), Integer.valueOf(var6)});
@@ -7314,7 +7531,7 @@ public class RenderBlocks
      */
     public static boolean renderItemIn3d(int par0)
     {
-        return par0 == 0 ? true : (par0 == 31 ? true : (par0 == 13 ? true : (par0 == 10 ? true : (par0 == 11 ? true : (par0 == 27 ? true : (par0 == 22 ? true : (par0 == 21 ? true : (par0 == 16 ? true : (par0 == 26 ? true : (Reflector.hasClass(0) ? Reflector.callBoolean(2, new Object[] {Integer.valueOf(par0)}): false))))))))));
+        return par0 == 0 ? true : (par0 == 31 ? true : (par0 == 13 ? true : (par0 == 10 ? true : (par0 == 11 ? true : (par0 == 27 ? true : (par0 == 22 ? true : (par0 == 21 ? true : (par0 == 16 ? true : (par0 == 26 ? true : (par0 == 100 ? true : (par0 == 101 ? true : (Reflector.hasClass(0) ? Reflector.callBoolean(2, new Object[] {Integer.valueOf(par0)}): false))))))))))));
     }
 
     private boolean hasSnowNeighbours(int var1, int var2, int var3)

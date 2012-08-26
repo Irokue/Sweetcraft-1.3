@@ -25,7 +25,7 @@ public class BlockDalleLaine extends Block
         {
             opaqueCubeLookup[par1] = true;
         }
-
+        this.setCreativeTab(CreativeTabs.tabBlock);
         setLightOpacity(255);
     }
 

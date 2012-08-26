@@ -78,10 +78,10 @@ public class BlockRedstoneBlock extends Block {
 	     * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the
 	     * block.
 	     */
-	    public boolean blockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
+	    public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
 	    {
 	        glow(par1World, par2, par3, par4);
-	        return super.blockActivated(par1World, par2, par3, par4, par5EntityPlayer);
+	        return super.onBlockActivated(par1World, par2, par3, par4, par5EntityPlayer, par6,  par7, par8, par9);
 	    }
 
 	    /**

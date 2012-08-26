@@ -5,6 +5,7 @@ public class BlockTable extends Block {
 	public BlockTable(int par1, int par2){
 		super(par1, par2, Material.wood);
 		blockIndexInTexture = 4;
+		this.setCreativeTab(CreativeTabs.tabDeco);
 	}
 
 	public BlockTable(int par1, int par2, Material par3Material) {
@@ -34,7 +35,7 @@ public class BlockTable extends Block {
      */
     public int getRenderType()
     {
-        return 31;
+        return 101;
     }
 
 }

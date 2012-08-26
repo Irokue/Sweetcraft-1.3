@@ -195,29 +195,30 @@ public class Block
     
     public static final Block chaise = (new BlockChaise(200, 4)).setHardness(2.0F).setResistance(5F).setStepSound(soundWoodFootstep).setBlockName("chaise").setRequiresSelfNotify();
     public static final Block table = (new BlockTable(201, 4)).setHardness(2.0F).setResistance(5F).setStepSound(soundWoodFootstep).setBlockName("table").setRequiresSelfNotify();
-    public static final Block X = (new BlockX(202, 173)).setHardness(99999999999F).setBlockUnbreakable().setStepSound(soundGlassFootstep).setBlockName("x");
-    public static final Block blockCoal = (new BlockOreStorage(203, 168)).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockCoal");
-    public static final Block blockRedstone = (new BlockRedstoneBlock(204, 169, false)).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockRedstone");
-    public static final Block blockRedstoneGlowing = (new BlockRedstoneBlock(205, 169, true)).setLightValue(0.625F).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockRedstone").setRequiresSelfNotify();
-    public static final Block grappeCrops = (new BlockGrappeCrops(206, 170)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("grappeCrops").disableStats().setRequiresSelfNotify();
-    public static final Block foin = (new Block(207, 200, Material.cloth)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("foin");
+    public static final Block X = (new BlockX(202, 203)).setHardness(99999999999F).setBlockUnbreakable().setStepSound(soundGlassFootstep).setBlockName("x");
+    public static final Block blockCoal = (new BlockOreStorage(203, 26)).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockCoal");
+    public static final Block blockRedstone = (new BlockRedstoneBlock(204, 27, false)).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockRedstone");
+    public static final Block blockRedstoneGlowing = (new BlockRedstoneBlock(205, 27, true)).setLightValue(0.625F).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockRedstone").setRequiresSelfNotify();
+    public static final Block grappeCrops = (new BlockGrappeCrops(206, 200)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("grappeCrops").disableStats().setRequiresSelfNotify();
+    public static final Block foin = (new Block(207, 204, Material.cloth)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("foin");
     public static final Block stairsFoin = (new BlockStairs(208, foin, 0)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("stairsFoin");
     public static final Block CropsOrge = (new BlockCropsOrge(209, 184)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("OrgeCrops").disableStats().setRequiresSelfNotify();
-    public static final Block nuage = (new BlockNuage(210,201,Material.cloth,false)).setBlockUnbreakable().setResistance(6000000F).setStepSound(soundClothFootstep).setBlockName("Nuage");
+    public static final Block nuage = (new BlockNuage(210,235,Material.cloth,false)).setBlockUnbreakable().setResistance(6000000F).setStepSound(soundClothFootstep).setBlockName("Nuage");
     public static final Block tapis = (new BlockTapis(211, 64)).setHardness(0.5F).setStepSound(soundClothFootstep).setBlockName("Tapis").setLightOpacity(0);
-    public static final Block highWood = (new Block(212, 25, Material.cloth)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("foin");
-    public static final Block highStone = (new Block(213, 109, Material.rock)).setHardness(2.0F).setResistance(9F).setStepSound(soundWoodFootstep).setBlockName("highWood").setRequiresSelfNotify();
+    public static final Block highWood = (new Block(212, 25, Material.cloth)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("foin").setCreativeTab(null);
+    public static final Block highStone = (new Block(213, 109, Material.rock)).setHardness(2.0F).setResistance(9F).setStepSound(soundWoodFootstep).setBlockName("highWood").setRequiresSelfNotify().setCreativeTab(null);
     public static final Block barriereBrique = (new BlockFence(214, 7, Material.rock)).setHardness(2.0F).setResistance(10F).setStepSound(soundStoneFootstep).setBlockName("barriereBrique");
     public static final Block dalleLaine = (new BlockDalleLaine(215,true)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("demiDalleLaine");
     public static final Block demiDalleLaine = (new BlockDalleLaine(216,false)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("demiDalleLaine");
     public static final Block  demiDalleLaineEnvers = (new BlockDalleLaineEnvers(217,false)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("demiDalleLaine");
-    public static final Block leavesPommier =(new BlockLeavesPommier(218, 232)).setHardness(0.2F).setLightOpacity(1).setStepSound(soundGrassFootstep).setBlockName("leaves").setRequiresSelfNotify();
-    public static final Block blocCanne = new Block(219, 233,Material.plants).setHardness(1.5F).setResistance(5F).setStepSound(soundStoneFootstep).setBlockName("blocCanne");
-    public static final BlockFlower plantAdd = (BlockFlower)(new BlockFlower(220, 216)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower1");
-    public static final BlockFlower plantAddd = (BlockFlower)(new BlockFlower(221, 217)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower2");
-    public static final BlockFlower plantAdddd = (BlockFlower)(new BlockFlower(222, 218)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower3");
-    public static final BlockFlower plantAddddd = (BlockFlower)(new BlockFlower(223, 219)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower4");
-    public static final Block cible = new BlockCible(224,234).setHardness(0.5F).setStepSound(soundWoodFootstep).setBlockName("cible").setRequiresSelfNotify();
+    public static final Block leavesPommier =(new BlockLeavesPommier(218, 215)).setHardness(0.2F).setLightOpacity(1).setStepSound(soundGrassFootstep).setBlockName("leaves").setRequiresSelfNotify();
+//    public static final Block blocCanne = new Block(219, 233,Material.plants).setHardness(1.5F).setResistance(5F).setStepSound(soundStoneFootstep).setBlockName("blocCanne");
+    public static final BlockFlower pinkFlower = (BlockFlower)(new BlockFlower(220, 236)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower1");
+    public static final BlockFlower loveFlower = (BlockFlower)(new BlockFlower(221, 220)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower2");
+    public static final BlockFlower whiteFlower = (BlockFlower)(new BlockFlower(222, 221)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower3");
+    public static final BlockFlower blueFlower = (BlockFlower)(new BlockFlower(223, 219)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower4");
+    public static final BlockFlower orangeFlower = (BlockFlower)(new BlockFlower(224, 218)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("flower4");
+    public static final Block cible = new BlockCible(225,234).setHardness(0.5F).setStepSound(soundWoodFootstep).setBlockName("cible").setRequiresSelfNotify();
     
     
     /**

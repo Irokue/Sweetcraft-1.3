@@ -777,6 +777,10 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
         par1NBTTagCompound.setTag("EnderItems", this.theInventoryEnderChest.saveInventoryToNBT());
     }
 
+    public void displayGUISac(ItemStack par1ItemStack)
+    {
+    }
+    
     /**
      * Displays the GUI for interacting with a chest inventory. Args: chestInventory
      */
