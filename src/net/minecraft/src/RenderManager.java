@@ -83,6 +83,9 @@ public class RenderManager
         this.entityRenderMap.put(EntityBoat.class, new RenderBoat());
         this.entityRenderMap.put(EntityFishHook.class, new RenderFish());
         this.entityRenderMap.put(EntityLightningBolt.class, new RenderLightningBolt());
+        this.entityRenderMap.put(EntityCheval.class, new RenderCheval(new ModelCheval(), 0.7F));
+        this.entityRenderMap.put(EntityChevalBlanc.class, new RenderChevalBlanc(new ModelChevalBlanc(), 0.7F));
+        this.entityRenderMap.put(EntityChevalNoir.class, new RenderChevalNoir(new ModelChevalNoir(), 0.7F));
         Iterator var1 = this.entityRenderMap.values().iterator();
 
         while (var1.hasNext())

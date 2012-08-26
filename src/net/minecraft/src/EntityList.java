@@ -179,7 +179,7 @@ public class EntityList
         addMapping(EntityCreeper.class, "Creeper", 50, 894731, 0);
         addMapping(EntitySkeleton.class, "Skeleton", 51, 12698049, 4802889);
         addMapping(EntitySpider.class, "Spider", 52, 3419431, 11013646);
-        addMapping(EntityGiantZombie.class, "Giant", 53);
+        addMapping(EntityGiantZombie.class, "Giant", 53,0 ,1);
         addMapping(EntityZombie.class, "Zombie", 54, 44975, 7969893);
         addMapping(EntitySlime.class, "Slime", 55, 5349438, 8306542);
         addMapping(EntityGhast.class, "Ghast", 56, 16382457, 12369084);
@@ -202,5 +202,9 @@ public class EntityList
         addMapping(EntityIronGolem.class, "VillagerGolem", 99);
         addMapping(EntityVillager.class, "Villager", 120, 5651507, 12422002);
         addMapping(EntityEnderCrystal.class, "EnderCrystal", 200);
+        addMapping(EntityCheval.class, "Cheval", 201, 5651507, 12422002);
+        addMapping(EntityChevalNoir.class, "Cheval Noir", 202, 5651507, 12422002);
+        addMapping(EntityChevalBlanc.class, "Cheval Blanc", 203, 5651507, 12422002);
+    
     }
 }
