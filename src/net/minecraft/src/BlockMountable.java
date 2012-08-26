@@ -15,23 +15,20 @@ public class BlockMountable extends Block
         super(i, j, material);
     }
 
-    public boolean blockActivated(World world, int i, int j, int k, EntityPlayer entityplayer)
+    public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer)
     {
-        return blockActivated(world, i, j, k, entityplayer, 0.5F, 0.5F, 0.5F, 0, 0, 0, 0);
+        return onBlockActivated(world, i, j, k, entityplayer, 0.5F, 0.5F, 0.5F, 0, 0, 0, 0);
     }
 
-    public static boolean blockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f)
+    public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f)
     {
-        return blockActivated(world, i, j, k, entityplayer, 0.5F, f, 0.5F, 0, 0, 0, 0);
+        return onBlockActivated(world, i, j, k, entityplayer, 0.5F, f, 0.5F, 0, 0, 0, 0);
     }
 
-    public static boolean blockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f, float f1, float f2, int l, int i1, int j1, int k1)
+    public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f, float f1, float f2, int l, int i1, int j1, int k1)
     {
-        if (!world.isRemote)
-        {
             List list = world.getEntitiesWithinAABB(net.minecraft.src.EntityMountableBlock.class, AxisAlignedBB.getBoundingBox(i, j, k, (double)i + 1.0D, (double)j + 1.0D, (double)k + 1.0D).expand(1.0D, 1.0D, 1.0D));
             Iterator iterator = list.iterator();
-
             do
             {
                 if (!iterator.hasNext())
@@ -91,10 +88,5 @@ public class BlockMountable extends Block
             world.spawnEntityInWorld(entitymountableblock1);
             entitymountableblock1.interact(entityplayer);
             return true;
-        }
-        else
-       {
-           return true;
-        }
     }
 }

@@ -25,9 +25,14 @@ public class BlockChaise extends BlockMountable{
         return false;
     }
     
-    public static boolean blockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f)
+    public void onBlockClicked(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
     {
-        return blockActivated(world, i, j, k, entityplayer, 0.5F, 0.5f, 0.5F, 0, 0, 0, 0);
+    	this.onBlockActivated(par1World, par2, par3, par4, par5EntityPlayer, 0.5F);
+    }
+    
+    public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f)
+    {
+        return onBlockActivated(world, i, j, k, entityplayer, 0.5F, 0.5f, 0.5F, 0, 0, 0, 0);
     }
 
 
