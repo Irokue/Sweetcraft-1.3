@@ -334,34 +334,10 @@ public class EntityRenderer
 
             boolean var5 = false;
 
-            if (this.mc.gameSettings.ofKeyBindZoom.keyCode < 0)
-            {
-                var5 = Mouse.isButtonDown(this.mc.gameSettings.ofKeyBindZoom.keyCode + 100);
-            }
-            else
-            {
-                var5 = Keyboard.isKeyDown(this.mc.gameSettings.ofKeyBindZoom.keyCode);
-            }
 
             if (var5)
             {
-                if (!this.zoomMode)
-                {
-                    this.zoomMode = true;
                     this.mc.gameSettings.smoothCamera = true;
-                }
-
-                if (this.zoomMode)
-                {
-                    var4 /= 4.0F;
-                }
-            }
-            else if (this.zoomMode)
-            {
-                this.zoomMode = false;
-                this.mc.gameSettings.smoothCamera = false;
-                this.mouseFilterXAxis = new MouseFilter();
-                this.mouseFilterYAxis = new MouseFilter();
             }
 
             if (var3.getHealth() <= 0)

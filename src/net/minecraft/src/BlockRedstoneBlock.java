@@ -13,7 +13,8 @@ public class BlockRedstoneBlock extends Block {
         {
             setTickRandomly(true);
         }
-        
+        if(!par3)
+        this.setCreativeTab(CreativeTabs.tabBlock);
 		glowing = par3;
 	}
 	

@@ -1,6 +1,7 @@
 package net.minecraft.src;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class BlockDalleLaine extends Block
@@ -25,6 +26,7 @@ public class BlockDalleLaine extends Block
         {
             opaqueCubeLookup[par1] = true;
         }
+        if(!par2)
         this.setCreativeTab(CreativeTabs.tabBlock);
         setLightOpacity(255);
     }
@@ -106,7 +108,7 @@ public class BlockDalleLaine extends Block
      * Called when a block is placed using an item. Used often for taking the facing and figuring out how to position
      * the item. Args: x, y, z, facing
      */
-    public void onBlockPlaced(World par1World, int par2, int par3, int par4, int par5)
+    public void updateBlockMetadata(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8)
     {
         if (par5 == 0 && !blockType)
         {
@@ -205,7 +207,17 @@ public class BlockDalleLaine extends Block
         }
     }
 
-
+    /**
+     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+     */
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
+        for (int var4 = 0; var4 < 16; ++var4)
+        {
+            par3List.add(new ItemStack(par1, 1, var4));
+        }
+    }    
+    
     /**
      * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage
      * and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
