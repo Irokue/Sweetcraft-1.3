@@ -136,6 +136,7 @@ public class EntityChevalBlanc extends EntityAnimal
      */
     public boolean interact(EntityPlayer par1EntityPlayer)
     {
+    	if(this.worldObj.isRemote) return false;
     	par1EntityPlayer.mountEntity(this);
     	return true;
     }

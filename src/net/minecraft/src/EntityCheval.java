@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import net.minecraft.client.Minecraft;
+
 public class EntityCheval extends EntityAnimal
 {
 	 float f = 1.1F;
@@ -12,14 +14,14 @@ public class EntityCheval extends EntityAnimal
         tasks.addTask(0, new EntityAISwimming(this));
         tasks.addTask(1, new EntityAIPanic(this, 0.5f));
         tasks.addTask(2, new EntityAIMate(this, 0.5f));
-        tasks.addTask(3, new EntityAITempt(this,0.5f, Item.wheat.shiftedIndex, false));
-        tasks.addTask(4, new EntityAIFollowParent(this, 0.5f));
         tasks.addTask(5, new EntityAIWander(this, 0.5f));
         tasks.addTask(6, new EntityAIWatchClosest(this, net.minecraft.src.EntityPlayer.class, 6F));
         tasks.addTask(7, new EntityAILookIdle(this));
+        tasks.addTask(3, new EntityAITempt(this,0.5f, Item.wheat.shiftedIndex, false));
+        tasks.addTask(4, new EntityAIFollowParent(this, 0.5f));
     }
 	
-	public void updateEntityActionState()
+	protected void updateEntityActionState()
 	{
 		if (riddenByEntity != null )
 		{
@@ -44,13 +46,13 @@ public class EntityCheval extends EntityAnimal
 			}
 			rotationPitch=0;
 			rotationYaw=prevRotationYaw=joueur.rotationYaw;
-			if (joueur.isJumping && this.isCollidedVertically)
+			if (Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed() && this.isCollidedVertically)
 			{
-				motionY=0.75f;
+				motionY=0.75F;
 			}
-			if (isInWater() && joueur.isJumping )
+			if (isInWater() && Minecraft.getMinecraft().gameSettings.keyBindJump.isPressed())
 			{
-				motionY=0.75f;
+				motionY +=0.75F;
 			}
 		}else
 		{
@@ -67,11 +69,8 @@ public class EntityCheval extends EntityAnimal
      */
     public boolean isAIEnabled()
     {	
-		if (riddenByEntity != null)
-		{
-        return false;
-		}
-		else return true;
+    	if(this.riddenByEntity != null) return false;
+		return true;
 	}
 
     public int getMaxHealth()
@@ -132,6 +131,7 @@ public class EntityCheval extends EntityAnimal
      */
     public boolean interact(EntityPlayer par1EntityPlayer)
     {
+    	if(this.worldObj.isRemote) return false;
     	par1EntityPlayer.mountEntity(this);
     	return true;
     }

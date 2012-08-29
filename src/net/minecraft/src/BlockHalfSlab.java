@@ -7,6 +7,8 @@ public abstract class BlockHalfSlab extends Block
 {
     private final boolean isDoubleSlab;
 
+    
+    
     public BlockHalfSlab(int par1, boolean par2, Material par3Material)
     {
         super(par1, 6, par3Material);

@@ -26,8 +26,6 @@ public class BlockDalleLaine extends Block
         {
             opaqueCubeLookup[par1] = true;
         }
-        if(!par2)
-        this.setCreativeTab(CreativeTabs.tabBlock);
         setLightOpacity(255);
     }
 
@@ -71,6 +69,12 @@ public class BlockDalleLaine extends Block
 //        return super.getCollisionBoundingBoxFromPool(par1World, par2, par3, par4);
 //    }
 
+    public CreativeTabs getCreativeTabToDisplayOn()
+    {
+    	if(blockType) return null;
+    	return CreativeTabs.tabDeco;
+    }
+    
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */

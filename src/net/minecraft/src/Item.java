@@ -176,11 +176,12 @@ public class Item
     public static Item raisinSeed = (new ItemSeeds(502, Block.grappeCrops.blockID, Block.tilledField.blockID)).setIconCoord(9, 12).setItemName("raisinSeeds").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item vin = (new ItemVin(503)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 20, 0, 100F).setIconCoord(11, 12).setItemName("vin").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item vinVide = (new Item(504)).setIconCoord(11, 13).setItemName("vinVide").setTabToDisplayOn(CreativeTabs.tabFood);
+   
     public static Item chopeBiere = (new ItemBiere(505)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 20, 0, 1.0F).setIconCoord(5, 12).setItemName("chopeBière").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item chopeVide = (new Item(506)).setIconCoord(5, 9).setItemName("chopeVide").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item seedOrge = new ItemSeeds(507, Block.CropsOrge.blockID, Block.tilledField.blockID).setIconCoord(9, 11).setItemName("seedOrge").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item orge = new Item(508).setIconCoord(5, 10).setItemName("Orge").setTabToDisplayOn(CreativeTabs.tabMaterials);
-    public static Item liquideSuspect = (new ItemLiquideSuspect(509)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 60, 0, 1.0F).setIconCoord(5, 11).setItemName("liquideSuspect").setTabToDisplayOn(CreativeTabs.tabFood);
+    public static Item liquideSuspect = (new ItemLiquideSuspect(509)).setAlwaysEdible().setPotionEffect(Potion.confusion.id, 60, 1, 1.0F).setIconCoord(5, 11).setItemName("liquideSuspect").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item bolLait = (new ItemSoup(510, 9)).setIconCoord(5, 13).setItemName("Bol de lait").setTabToDisplayOn(CreativeTabs.tabFood);
     public static Item tube = (new Item(511)).setIconCoord(1,6).setItemName("tube");
     public static Item flechette = (new Item(512)).setIconCoord(1,7).setItemName("flechette");
