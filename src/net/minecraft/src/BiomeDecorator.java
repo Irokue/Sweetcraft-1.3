@@ -52,6 +52,11 @@ public class BiomeDecorator
     /** Field that holds one of the plantRed WorldGenFlowers */
     protected WorldGenerator plantRedGen;
 
+    protected WorldGenerator whiteFlowerGen;
+    protected WorldGenerator orangeFlowerGen;
+    protected WorldGenerator blueFlowerGen;
+    protected WorldGenerator roseFlowerGen;
+    
     /** Field that holds mushroomBrown WorldGenFlowers */
     protected WorldGenerator mushroomBrownGen;
 
@@ -146,6 +151,10 @@ public class BiomeDecorator
         this.plantRedGen = new WorldGenFlowers(Block.plantRed.blockID);
         this.mushroomBrownGen = new WorldGenFlowers(Block.mushroomBrown.blockID);
         this.mushroomRedGen = new WorldGenFlowers(Block.mushroomRed.blockID);
+        this.orangeFlowerGen = new WorldGenFlowers(Block.orangeFlower.blockID);
+        this.blueFlowerGen = new WorldGenFlowers(Block.blueFlower.blockID);
+        this.whiteFlowerGen = new WorldGenFlowers(Block.whiteFlower.blockID);
+        this.roseFlowerGen = new WorldGenFlowers(Block.pinkFlower.blockID);
         this.bigMushroomGen = new WorldGenBigMushroom();
         this.reedGen = new WorldGenReed();
         this.cactusGen = new WorldGenCactus();
@@ -258,6 +267,34 @@ public class BiomeDecorator
                 var4 = this.randomGenerator.nextInt(128);
                 var7 = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
                 this.plantRedGen.generate(this.currentWorld, this.randomGenerator, var3, var4, var7);
+            }
+            if (this.randomGenerator.nextInt(8) == 0)
+            {
+                var3 = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
+                var4 = this.randomGenerator.nextInt(128);
+                var7 = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
+                this.whiteFlowerGen.generate(this.currentWorld, this.randomGenerator, var3, var4, var7);
+            }
+            if (this.randomGenerator.nextInt(4) == 0)
+            {
+                var3 = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
+                var4 = this.randomGenerator.nextInt(128);
+                var7 = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
+                this.orangeFlowerGen.generate(this.currentWorld, this.randomGenerator, var3, var4, var7);
+            }
+            if (this.randomGenerator.nextInt(12) == 0)
+            {
+                var3 = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
+                var4 = this.randomGenerator.nextInt(128);
+                var7 = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
+                this.blueFlowerGen.generate(this.currentWorld, this.randomGenerator, var3, var4, var7);
+            }
+            if (this.randomGenerator.nextInt(4) == 0)
+            {
+                var3 = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
+                var4 = this.randomGenerator.nextInt(128);
+                var7 = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
+                this.roseFlowerGen.generate(this.currentWorld, this.randomGenerator, var3, var4, var7);
             }
         }
 

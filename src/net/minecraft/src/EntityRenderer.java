@@ -868,7 +868,7 @@ public class EntityRenderer
         if (var2 != null && Config.getNewRelease() != null)
         {
             String var3 = "HD " + Config.getNewRelease();
-            this.mc.ingameGUI.getChatGUI().printChatMessage("A new \u00a7eOptiFine\u00a7f version is available: \u00a7e" + var3 + "\u00a7f");
+//            this.mc.ingameGUI.getChatGUI().printChatMessage("A new \u00a7eOptiFine\u00a7f version is available: \u00a7e" + var3 + "\u00a7f");
             Config.setNewRelease((String)null);
         }
 

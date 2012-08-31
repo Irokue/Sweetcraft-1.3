@@ -42,7 +42,6 @@ public class BlockLeavesPommier extends BlockLeavesBase
                         if (var12 == Block.leavesPommier.blockID)
                         {
                             int var13 = par1World.getBlockMetadata(par2 + var9, par3 + var10, par4 + var11);
-                            par1World.setBlockMetadata(par2 + var9, par3 + var10, par4 + var11, var13 | 8);
                         }
                     }
                 }
@@ -261,7 +260,14 @@ public class BlockLeavesPommier extends BlockLeavesBase
      */
     public int getBlockTextureFromSideAndMetadata(int par1, int par2)
     {
-    	return par1 == 1 ? blockIndexInTexture : (par1 == 0 ? blockIndexInTexture : blockIndexInTexture +1);
+	switch(par2)
+	{
+        	case 1:
+        	    if(par1 == 1) return 216;
+        	    return 217;
+		default:
+		    return 216;
+	}
     }
 
     /**

@@ -33,7 +33,7 @@ public enum EnumOptions
     TALK_GLOBAL("options.talkglobal", false, true),
     TALK_COMMERCE("options.talkcommerce", false, true),
     TALK_LOCAL("options.talklocal", false, true),
-    HD_SKINS("options.hdSkins", false, true),
+    HD_SKINS("Skins HD", false, true),
     ENABLE_VSYNC("options.vsync", false, true),
     FOG_FANCY("Fog", false, false),
     FOG_START("Fog Start", false, false),

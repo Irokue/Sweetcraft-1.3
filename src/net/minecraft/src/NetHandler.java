@@ -66,6 +66,19 @@ public abstract class NetHandler
         this.registerPacket(par1Packet15Place);
     }
 
+    public void handleMoney(Packet133Money packet)
+    {
+    	this.registerPacket(packet);
+    }
+    public void handleJob(Packet134Job packet)
+    {
+    	this.registerPacket(packet);
+    }
+    public void handleGuilde(Packet135Guilde packet)
+    {
+    	this.registerPacket(packet);
+    }
+    
     public void handleBlockItemSwitch(Packet16BlockItemSwitch par1Packet16BlockItemSwitch)
     {
         this.registerPacket(par1Packet16BlockItemSwitch);

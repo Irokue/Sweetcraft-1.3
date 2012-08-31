@@ -6,7 +6,7 @@ public class RecipesIngots
 
     public RecipesIngots()
     {
-        this.recipeItems = new Object[][] {{Block.blockGold, new ItemStack(Item.ingotGold, 9)}, {Block.blockSteel, new ItemStack(Item.ingotIron, 9)}, {Block.blockDiamond, new ItemStack(Item.diamond, 9)}, {Block.blockEmerald, new ItemStack(Item.emerald, 9)}, {Block.blockLapis, new ItemStack(Item.dyePowder, 9, 4)}};
+        this.recipeItems = new Object[][] {{Block.blockGold, new ItemStack(Item.ingotGold, 9)}, {Block.blockSteel, new ItemStack(Item.ingotIron, 9)}, {Block.blockDiamond, new ItemStack(Item.diamond, 9)}, {Block.blockEmerald, new ItemStack(Item.emerald, 9)}, {Block.blockLapis, new ItemStack(Item.dyePowder, 9, 4)}, {Block.blockRedstone, new ItemStack(Item.redstone, 9)}, {Block.blockCoal, new ItemStack(Item.coal, 9)}};
     }
 
     /**
@@ -25,6 +25,10 @@ public class RecipesIngots
             par1CraftingManager.addRecipe(new ItemStack(var6), new Object[] {"###", "###", "###", '#', var7});
             par1CraftingManager.addRecipe(var7, new Object[] {"#", '#', var6});
         }
+        
+        par1CraftingManager.addRecipe(new ItemStack(Block.foin, 3), new Object[] {"###", "###", "###", '#', Item.wheat});
+        par1CraftingManager.addRecipe(new ItemStack(Item.wheat, 9), new Object[] {"#", '#', Block.foin});
+            
 
         par1CraftingManager.addRecipe(new ItemStack(Item.ingotGold), new Object[] {"###", "###", "###", '#', Item.goldNugget});
         par1CraftingManager.addRecipe(new ItemStack(Item.goldNugget, 9), new Object[] {"#", '#', Item.ingotGold});

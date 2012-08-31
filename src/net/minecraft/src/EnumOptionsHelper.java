@@ -122,5 +122,47 @@ class EnumOptionsHelper
         {
             ;
         }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.SEE_GLOBAL.ordinal()] = 14;
+        }
+        catch (NoSuchFieldError nosuchfielderror6) { }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.SEE_COMMERCE.ordinal()] = 15;
+        }
+        catch (NoSuchFieldError nosuchfielderror7) { }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.SEE_LOCAL.ordinal()] = 16;
+        }
+        catch (NoSuchFieldError nosuchfielderror8) { }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.TALK_GLOBAL.ordinal()] = 17;
+        }
+        catch (NoSuchFieldError nosuchfielderror8) { }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.TALK_COMMERCE.ordinal()] = 18;
+        }
+        catch (NoSuchFieldError nosuchfielderror8) { }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.TALK_LOCAL.ordinal()] = 19;
+        }
+        catch (NoSuchFieldError nosuchfielderror8) { }
+        
+        try
+        {
+            enumOptionsMappingHelperArray[EnumOptions.HD_SKINS.ordinal()] = 20;
+        }
+        catch (NoSuchFieldError nosuchfielderror9) { }
     }
 }

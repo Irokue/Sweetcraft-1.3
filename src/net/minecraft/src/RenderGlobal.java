@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -2458,6 +2460,55 @@ public class RenderGlobal implements IWorldAccess
                     else
                     {
                         var5.playerCloakUrl = "";
+                    }
+                }
+            }
+        }
+    }
+    
+    public void updateSkins()
+    {
+        if (this.theWorld != null)
+        {
+            boolean var1 = mc.gameSettings.hdSkins;
+            List var2 = this.theWorld.playerEntities;
+
+            for (int var3 = 0; var3 < var2.size(); ++var3)
+            {
+                Entity var4 = (Entity)var2.get(var3);
+
+                if (var4 instanceof EntityPlayer)
+                {
+                    EntityPlayer var5 = (EntityPlayer)var4;
+
+                    if (var1)
+                    {
+                    	try {
+            				URL url = new URL("http://s3.amazonaws.com/MinecraftSkins/" + StringUtils.stripControlCodes(var5.username) + ".png");
+            				HttpURLConnection huc = (HttpURLConnection) url
+            						.openConnection();
+            				huc.setRequestMethod("GET"); // OR huc.setRequestMethod
+            												// ("HEAD");
+            				huc.setRequestProperty(
+            						"User-Agent",
+            						"Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 (.NET CLR 3.5.30729)");
+            				huc.connect();
+            				System.out.println(huc.getResponseCode());
+            				if (huc.getResponseCode() == HttpURLConnection.HTTP_OK) {
+            					var5.skinUrl = (new StringBuilder())
+            							.append("http://launcher.sweetcraft.fr/skins/")
+            							.append(var5.username).append(".png").toString();
+            				} else {
+            					var5.skinUrl = "http://skins.minecraft.net/MinecraftSkins/" + StringUtils.stripControlCodes(var5.username) + ".png";
+            				}
+            			} catch (Exception e) {
+            				System.out.println("fail");
+            			}
+                    }
+                    else
+                    {
+                        var5.skinUrl =  "http://s3.amazonaws.com/MinecraftSkins/" + StringUtils.stripControlCodes(var5.username) + ".png";
+                        System.out.println(var5.skinUrl);
                     }
                 }
             }

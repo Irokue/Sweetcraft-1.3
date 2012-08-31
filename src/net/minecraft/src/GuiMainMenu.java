@@ -2,8 +2,13 @@ package net.minecraft.src;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -25,6 +30,10 @@ public class GuiMainMenu extends GuiScreen
     private String splashText = "missingno";
     private GuiButton field_73973_d;
 
+    private int strpos = width + 1;
+    private String[] announces = {"Bon jeu sur Sweetcraft !"};
+    private int announceCount = 0;
+
     /** Timer used to rotate the panorama, increases every tick. */
     private int panoramaTimer = 0;
 
@@ -37,6 +46,7 @@ public class GuiMainMenu extends GuiScreen
     public GuiMainMenu()
     {
         BufferedReader var1 = null;
+        strpos = width + 1;
 
         try
         {
@@ -88,6 +98,13 @@ public class GuiMainMenu extends GuiScreen
     public void updateScreen()
     {
         ++this.panoramaTimer;
+        if(strpos < 0 - mc.fontRenderer.getStringWidth(announces[announceCount])){
+        	strpos = width + 1;
+        	if(announceCount >= announces.length - 1)
+        		announceCount = -1;
+        	announceCount++;
+        }
+        strpos -= 2;
     }
 
     /**
@@ -130,7 +147,7 @@ public class GuiMainMenu extends GuiScreen
         }
 
         StringTranslate var2 = StringTranslate.getInstance();
-        int var4 = this.height / 4 + 48;
+        int var4 = this.height / 4 + 36;
 
         if (this.mc.isDemo())
         {
@@ -141,7 +158,7 @@ public class GuiMainMenu extends GuiScreen
             this.func_73969_a(var4, 24, var2);
         }
 
-        this.controlList.add(new GuiButton(3, this.width / 2 - 100, var4 + 48, var2.translateKey("menu.mods")));
+        this.controlList.add(new GuiButton(3, this.width / 2 - 100, var4 + 72, var2.translateKey("menu.mods")));
 
         if (this.mc.hideQuitButton)
         {
@@ -149,11 +166,12 @@ public class GuiMainMenu extends GuiScreen
         }
         else
         {
-            this.controlList.add(new GuiButton(0, this.width / 2 - 100, var4 + 72 + 12, 98, 20, var2.translateKey("menu.options")));
-            this.controlList.add(new GuiButton(4, this.width / 2 + 2, var4 + 72 + 12, 98, 20, var2.translateKey("menu.quit")));
+            this.controlList.add(new GuiButton(0, this.width / 2 - 100, var4 + 72 + 24, 98, 20, var2.translateKey("menu.options")));
+            this.controlList.add(new GuiButton(4, this.width / 2 + 2, var4 + 72 + 24, 98, 20, var2.translateKey("menu.quit")));
         }
-
-        this.controlList.add(new GuiButtonLanguage(5, this.width / 2 - 124, var4 + 72 + 12));
+        this.controlList.add(new GuiButton(20, this.width / 2 - 100, var4 + 48, "Connexion à "+FontColors.GREEN+"Sweet"+FontColors.GOLD+"craft"));
+        this.controlList.add(new GuiButtonLanguage(5, this.width / 2 - 124, var4 + 72 + 24));
+        updateAnnounces();
     }
 
     private void func_73969_a(int par1, int par2, StringTranslate par3StringTranslate)
@@ -173,6 +191,52 @@ public class GuiMainMenu extends GuiScreen
         {
             this.field_73973_d.enabled = false;
         }
+    }
+    
+    
+    private void updateAnnounces(){
+    	File splashes = new File(Minecraft.getMinecraftDir(), "splashes.txt");
+        String read;
+        String tempAnnonces = "";
+        try {
+			URL s = new URL("http://launcher.sweetcraft.fr/annonces.txt");
+			BufferedReader bf = new BufferedReader(new InputStreamReader(s.openStream()));
+			while((read = bf.readLine()) != null){
+				tempAnnonces += read + "\n";		
+			}
+				try{
+					BufferedWriter bw = new BufferedWriter(new FileWriter(splashes));
+					bw.append(tempAnnonces);
+				}catch(IOException e){
+					e.printStackTrace();
+				}
+
+        } catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        doSplashes(tempAnnonces);
+    }
+    
+    private void doSplashes(String annonces){
+    	annonces = annonces.replaceAll("&0", FontColors.BLACK.toString());
+    	annonces = annonces.replaceAll("&1", FontColors.DARK_BLUE.toString());
+    	annonces = annonces.replaceAll("&2", FontColors.DARK_GREEN.toString());
+    	annonces = annonces.replaceAll("&3", FontColors.DARK_AQUA.toString());
+    	annonces = annonces.replaceAll("&4", FontColors.DARK_RED.toString());
+    	annonces = annonces.replaceAll("&5", FontColors.DARK_PURPLE.toString());
+    	annonces = annonces.replaceAll("&6", FontColors.GOLD.toString());
+    	annonces = annonces.replaceAll("&7", FontColors.GRAY.toString());
+    	annonces = annonces.replaceAll("&8", FontColors.DARK_GRAY.toString());
+    	annonces = annonces.replaceAll("&9", FontColors.BLUE.toString());
+    	annonces = annonces.replaceAll("&a", FontColors.GREEN.toString());
+    	annonces = annonces.replaceAll("&b", FontColors.AQUA.toString());
+    	annonces = annonces.replaceAll("&c", FontColors.RED.toString());
+    	annonces = annonces.replaceAll("&d", FontColors.LIGHT_PURPLE.toString());
+    	annonces = annonces.replaceAll("&e", FontColors.YELLOW.toString());
+    	annonces = annonces.replaceAll("&f", FontColors.WHITE.toString());
+    	announces = annonces.split("\n");
     }
 
     /**
@@ -225,6 +289,11 @@ public class GuiMainMenu extends GuiScreen
                 GuiYesNo var4 = GuiSelectWorld.func_74061_a(this, var3.getWorldName(), 12);
                 this.mc.displayGuiScreen(var4);
             }
+        }
+        
+        if (par1GuiButton.id == 20)
+        {
+        	this.mc.displayGuiScreen(new GuiConnecting(mc, "serveur.sweetcraft.fr", 25565));
         }
     }
 
@@ -431,7 +500,7 @@ public class GuiMainMenu extends GuiScreen
         GL11.glScalef(var8, var8, var8);
         this.drawCenteredString(this.fontRenderer, this.splashText, 0, -8, 16776960);
         GL11.glPopMatrix();
-        String var9 = "Minecraft 1.3.2";
+        String var9 = FontColors.GREEN + "Sweet"+FontColors.GOLD+"craft"+FontColors.RESET+" 1.4";
 
         if (this.mc.isDemo())
         {
@@ -440,7 +509,11 @@ public class GuiMainMenu extends GuiScreen
 
         this.drawString(this.fontRenderer, var9, 2, this.height - 10, 16777215);
         String var10 = "Copyright Mojang AB. Do not distribute!";
+        String var11 = FontColors.DARK_GRAY + "Basé sur Minecraft 1.3.0";
+		drawRect(0, 0, this.width, fontRenderer.FONT_HEIGHT + 4, Integer.MIN_VALUE);
+		drawString(fontRenderer, announces[announceCount], (int)this.strpos, 2, 0xffffff);
         this.drawString(this.fontRenderer, var10, this.width - this.fontRenderer.getStringWidth(var10) - 2, this.height - 10, 16777215);
+        this.drawString(this.fontRenderer, var11, this.width - this.fontRenderer.getStringWidth(var11) - 2, this.height - 12 - fontRenderer.FONT_HEIGHT, 0xffffff);
         super.drawScreen(par1, par2, par3);
     }
 }

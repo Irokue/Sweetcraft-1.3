@@ -256,7 +256,6 @@ public class FontRenderer
                 var12 /= 4;
                 var26 /= 4;
             }
-
             this.colorCode[var9] = (var25 & 255) << 16 | (var12 & 255) << 8 | var26 & 255;
         }
     }

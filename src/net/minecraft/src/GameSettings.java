@@ -498,6 +498,7 @@ public class GameSettings
         if(par1EnumOptions == EnumOptions.HD_SKINS)
         {
         	hdSkins = !hdSkins;
+        	mc.renderGlobal.updateSkins();
         }
 
         if (par1EnumOptions == EnumOptions.ADVANCED_OPENGL)

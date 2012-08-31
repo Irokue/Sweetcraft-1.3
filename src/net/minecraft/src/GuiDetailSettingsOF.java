@@ -5,7 +5,7 @@ public class GuiDetailSettingsOF extends GuiScreen
     private GuiScreen prevScreen;
     protected String title = "Detail Settings";
     private GameSettings settings;
-    private static EnumOptions[] enumOptions = new EnumOptions[] {EnumOptions.CLOUDS, EnumOptions.CLOUD_HEIGHT, EnumOptions.TREES, EnumOptions.GRASS, EnumOptions.WATER, EnumOptions.RAIN, EnumOptions.SKY, EnumOptions.STARS, EnumOptions.SUN_MOON, EnumOptions.SHOW_CAPES, EnumOptions.DEPTH_FOG};
+    private static EnumOptions[] enumOptions = new EnumOptions[] {EnumOptions.CLOUDS, EnumOptions.CLOUD_HEIGHT, EnumOptions.TREES, EnumOptions.GRASS, EnumOptions.WATER, EnumOptions.RAIN, EnumOptions.SKY, EnumOptions.STARS, EnumOptions.SUN_MOON, EnumOptions.SHOW_CAPES, EnumOptions.DEPTH_FOG, EnumOptions.HD_SKINS};
     private int lastMouseX = 0;
     private int lastMouseY = 0;
     private long mouseStillTime = 0L;

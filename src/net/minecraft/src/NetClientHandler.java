@@ -766,6 +766,28 @@ public class NetClientHandler extends NetHandler
         this.mc.theWorld.getWorldInfo().setSpawnPosition(par1Packet6SpawnPosition.xPosition, par1Packet6SpawnPosition.yPosition, par1Packet6SpawnPosition.zPosition);
     }
 
+	public void handleMoney(Packet133Money packet) {
+		if (packet.playerId == mc.thePlayer.entityId) {
+			mc.thePlayer.money = (float) packet.money;
+		}
+	}
+
+	public void handleJob(Packet134Job packet) {
+		if (packet.playerId == mc.thePlayer.entityId) {
+			mc.thePlayer.job = packet.job;
+			mc.thePlayer.jobExperience = packet.jobExperience;
+			mc.thePlayer.jobMaxExperience = packet.jobMaxExperience;
+			mc.thePlayer.jobLevel = packet.jobLevel;
+		}
+	}
+
+	public void handleGuilde(Packet135Guilde packet) {
+		if (packet.playerId == mc.thePlayer.entityId) {
+			mc.thePlayer.guilde = packet.guilde;
+			mc.thePlayer.guildeRank = packet.guildeRank;
+		}
+	}
+
     /**
      * Packet handler
      */

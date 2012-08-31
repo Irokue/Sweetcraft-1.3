@@ -17,6 +17,21 @@ public abstract class EntityPlayer extends EntityLiving implements ICommandSende
 
     /** The player's food stats. (See class FoodStats) */
     protected FoodStats foodStats = new FoodStats();
+    
+    /**
+     * Client de Sweetcraft
+     *  - Ajout de la guilde, rang
+     *  - Ajout du métier, expérience
+     *  - Ajout de l'argent
+     */
+    public float money = 0.0f;
+    public String job = "Aucun";
+    public String guilde = "Aucune guilde";
+    public String guildeRank = "Aucun rang";
+    public int jobExperience = 0;
+    public int jobLevel = 0;
+    public int jobMaxExperience = 0;
+    
 
     /**
      * Used to tell if the player pressed jump twice. If this is at 0 and it's pressed (And they are allowed to fly, as

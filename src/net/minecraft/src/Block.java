@@ -200,7 +200,7 @@ public class Block
     public static final Block blockRedstone = (new BlockRedstoneBlock(204, 27, false)).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockRedstone");
     public static final Block blockRedstoneGlowing = (new BlockRedstoneBlock(205, 27, true)).setLightValue(0.625F).setHardness(5F).setResistance(10F).setStepSound(soundMetalFootstep).setBlockName("blockRedstone").setRequiresSelfNotify();
     public static final Block grappeCrops = (new BlockGrappeCrops(206, 200)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("grappeCrops").disableStats().setRequiresSelfNotify();
-    public static final Block foin = (new Block(207, 204, Material.cloth)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("foin");
+    public static final Block foin = (new Block(207, 204, Material.cloth)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("foin").setCreativeTab(CreativeTabs.tabBlock);
     public static final Block stairsFoin = (new BlockStairs(208, foin, 0)).setHardness(0.8F).setStepSound(soundClothFootstep).setBlockName("stairsFoin");
     public static final Block CropsOrge = (new BlockCropsOrge(209, 184)).setHardness(0.0F).setStepSound(soundGrassFootstep).setBlockName("OrgeCrops").disableStats().setRequiresSelfNotify();
     public static final Block nuage = (new BlockNuage(210,235,Material.cloth,false)).setBlockUnbreakable().setResistance(6000000F).setStepSound(soundClothFootstep).setBlockName("Nuage");
