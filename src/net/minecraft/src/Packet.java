@@ -420,9 +420,9 @@ public abstract class Packet
         addIdClassMapping(130, true, true, Packet130UpdateSign.class);
         addIdClassMapping(131, true, false, Packet131MapData.class);
         addIdClassMapping(132, true, false, Packet132TileEntityData.class);
-        addIdClassMapping(133, true, false, Packet133Money.class);
-        addIdClassMapping(134, true, false, Packet134Job.class);
-        addIdClassMapping(135, true, false, Packet135Guilde.class);
+        addIdClassMapping(133, true, true, Packet133Money.class);
+        addIdClassMapping(134, true, true, Packet134Job.class);
+        addIdClassMapping(135, true, true, Packet135Guilde.class);
         addIdClassMapping(200, true, false, Packet200Statistic.class);
         addIdClassMapping(201, true, false, Packet201PlayerInfo.class);
         addIdClassMapping(202, true, true, Packet202PlayerAbilities.class);

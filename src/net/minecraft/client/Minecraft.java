@@ -1558,6 +1558,9 @@ public abstract class Minecraft implements Runnable, IPlayerUsage
             while (this.gameSettings.keyBindSweetcraft.isPressed() && theWorld.isRemote)
             {
             	this.displayGuiScreen(new GuiUtils(this, theWorld, thePlayer));
+            	getSendQueue().addToSendQueue(new Packet133Money(thePlayer));
+            	getSendQueue().addToSendQueue(new Packet134Job(thePlayer));
+            	getSendQueue().addToSendQueue(new Packet135Guilde(thePlayer));
             }
 
             if (this.currentScreen == null && this.gameSettings.field_74323_J.isPressed() && var4)

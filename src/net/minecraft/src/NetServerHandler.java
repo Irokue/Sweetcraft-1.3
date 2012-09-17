@@ -570,6 +570,21 @@ public class NetServerHandler extends NetHandler
         }
     }
 
+    //sweetcraft
+    
+	public void handleMoney(Packet133Money packet) {
+	}
+
+	public void handleJob(Packet134Job packet) {
+
+	}
+
+	public void handleGuilde(Packet135Guilde packet) {
+
+	}
+	//fin sweetcraft
+    
+    
     public void registerPacket(Packet par1Packet)
     {
         logger.warning(this.getClass() + " wasn\'t prepared to deal with a " + par1Packet.getClass());

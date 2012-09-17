@@ -1228,6 +1228,10 @@ public class Block
                 {
                     var1 = true;
                 }
+                if (var0 > 0 && blocksList[var0] instanceof BlockDalleLaine)
+                {
+                    var1 = true;
+                }
 
                 if (var0 == tilledField.blockID)
                 {

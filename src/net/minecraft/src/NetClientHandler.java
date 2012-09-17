@@ -773,7 +773,9 @@ public class NetClientHandler extends NetHandler
 	}
 
 	public void handleJob(Packet134Job packet) {
+		System.out.print("test");
 		if (packet.playerId == mc.thePlayer.entityId) {
+			System.out.print("test");
 			mc.thePlayer.job = packet.job;
 			mc.thePlayer.jobExperience = packet.jobExperience;
 			mc.thePlayer.jobMaxExperience = packet.jobMaxExperience;

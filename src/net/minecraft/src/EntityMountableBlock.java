@@ -36,8 +36,9 @@ public class EntityMountableBlock extends Entity
      */
     public boolean interact(EntityPlayer entityplayer)
     {
-        if (!super.interact(entityplayer))
-        {
+
+        //if (!super.interact(entityplayer))
+       // {
             if (!worldObj.isRemote && (riddenByEntity == null || riddenByEntity == entityplayer))
             {
                 entityplayer.mountEntity(this);
@@ -47,11 +48,11 @@ public class EntityMountableBlock extends Entity
             {
                 return false;
             }
-        }
-        else
-        {
-            return true;
-        }
+       // }
+        //else
+       // {
+           // return true;
+     //   }
     }
 
     /**

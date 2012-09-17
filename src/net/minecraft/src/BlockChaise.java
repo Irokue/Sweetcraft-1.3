@@ -25,17 +25,32 @@ public class BlockChaise extends BlockMountable{
         return false;
     }
     
-    public void onBlockClicked(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
+ /*   public void onBlockClicked(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
     {
+    	System.out.print("test");
     	this.onBlockActivated(par1World, par2, par3, par4, par5EntityPlayer, 0.5F);
+
     }
     
     public boolean onBlockActivated(World world, int i, int j, int k, EntityPlayer entityplayer, float f)
     {
+    	System.out.print("test2");
         return onBlockActivated(world, i, j, k, entityplayer, 0.5F, 0.5f, 0.5F, 0, 0, 0, 0);
     }
+*/
+    public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
+    {
+    	if (par1World.isRemote)
+        {
+            return true;
+        }
+        else
+        {
+        	return super.onBlockActivated(par1World, par2, par3, par4, par5EntityPlayer,0.5F, 0.5f, 0.5F, 0, 0, 0, 0);
 
-
+        }
+    }
+    
     /**
      * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
      */
